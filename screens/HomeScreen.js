@@ -1,9 +1,10 @@
 import React, {useLayoutEffect} from 'react';
-import {Text, View, StyleSheet, SafeAreaView, Image, TextInput} from 'react-native';
+import {Text, View, StyleSheet, SafeAreaView, Image, TextInput, ScrollView} from 'react-native';
 import {useNavigation} from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
+import Categories from "../components/Categories";
 const HomeScreen = () => {
     const navigation = useNavigation();
 
@@ -38,6 +39,10 @@ const HomeScreen = () => {
                 </View>
                 <MaterialIcons name="settings-input-component" size={24} color="#00CCBB" />
             </View>
+
+            <ScrollView>
+                <Categories />
+            </ScrollView>
         </SafeAreaView>
     );
 };
