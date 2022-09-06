@@ -4,8 +4,11 @@ import CategoryCard from "./CategoryCard";
 
 const Categories = () => {
     return (
-        <ScrollView>
-            <CategoryCard />
+        <ScrollView contentContainerStyle={{paddingHorizontal: 15, paddingTop: 10}} horizontal={true} showsHorizontalScrollIndicator={false}>
+            <CategoryCard imgUrl="https://miro.medium.com/max/480/1*1NNflMbWbsAznQp3roz5Sg.jpeg" title={'testing'} />
+            <CategoryCard imgUrl="https://miro.medium.com/max/480/1*1NNflMbWbsAznQp3roz5Sg.jpeg" title={'testing'} />
+            <CategoryCard imgUrl="https://miro.medium.com/max/480/1*1NNflMbWbsAznQp3roz5Sg.jpeg" title={'testing'} />
+
         </ScrollView>
     );
 };

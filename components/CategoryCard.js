@@ -1,12 +1,10 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 
-const CategoryCard = () => {
+const CategoryCard = ({imgUrl, title}) => {
     return (
         <View>
-            <Text>
-                byrookas 🚀
-            </Text>
+           <Text>{title}</Text>
         </View>
     );
 };
