@@ -62,9 +62,14 @@ const HomeScreen = () => {
             <ScrollView className="bg-gray-100" contentContainerStyle={{paddingBottom: 100}} showsVerticalScrollIndicator={false}>
                 <Categories />
             {/*    featured rows */}
-                <FeaturedRow id="1" title="Featured" description="Paid placements from our partners" featuredCategory="featured" />
-                <FeaturedRow id="2" title="Tasty Discounts" description="Everyone's been enjoying these juicy discounts!" featuredCategory="discounts" />
-                <FeaturedRow id="3" title="Offers near you!" description="Why not support your local restaurant tonight!" featuredCategory="offers" />
+                {featuredCategories?.map((category) => (
+                    <FeaturedRow
+                        key={category._id}
+                        id={category._id}
+                        title={category.name}
+                        description={category.short_description}
+                    />
+                ))}
             </ScrollView>
         </SafeAreaView>
     );
