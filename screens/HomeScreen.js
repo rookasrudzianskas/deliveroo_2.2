@@ -40,7 +40,7 @@ const HomeScreen = () => {
                 <MaterialIcons name="settings-input-component" size={24} color="#00CCBB" />
             </View>
 
-            <ScrollView>
+            <ScrollView className="bg-gray-100" contentContainerStyle={{paddingBottom: 100}}>
                 <Categories />
             </ScrollView>
         </SafeAreaView>
