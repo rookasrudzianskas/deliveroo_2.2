@@ -7,7 +7,7 @@ const HomeScreen = () => {
 
     useLayoutEffect(() => {
         navigation.setOptions({
-            headerTitle: 'Uizard Wifi Testing',
+            // headerTitle: 'Uizard Wifi Testing',
             headerShown: false
         });
     }, []);
