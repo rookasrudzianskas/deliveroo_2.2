@@ -8,7 +8,7 @@ const Categories = () => {
             <CategoryCard imgUrl="https://miro.medium.com/max/480/1*1NNflMbWbsAznQp3roz5Sg.jpeg" title={'testing'} />
             <CategoryCard imgUrl="https://miro.medium.com/max/480/1*1NNflMbWbsAznQp3roz5Sg.jpeg" title={'testing'} />
             <CategoryCard imgUrl="https://miro.medium.com/max/480/1*1NNflMbWbsAznQp3roz5Sg.jpeg" title={'testing'} />
-
+            <CategoryCard imgUrl="https://miro.medium.com/max/480/1*1NNflMbWbsAznQp3roz5Sg.jpeg" title={'testing'} />
         </ScrollView>
     );
 };

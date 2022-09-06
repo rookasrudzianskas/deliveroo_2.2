@@ -5,6 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import Categories from "../components/Categories";
+import FeaturedRow from "../components/FeaturedRow";
 const HomeScreen = () => {
     const navigation = useNavigation();
 
@@ -40,8 +41,12 @@ const HomeScreen = () => {
                 <MaterialIcons name="settings-input-component" size={24} color="#00CCBB" />
             </View>
 
-            <ScrollView className="bg-gray-100" contentContainerStyle={{paddingBottom: 100}}>
+            <ScrollView className="bg-gray-100" contentContainerStyle={{paddingBottom: 100}} showsVerticalScrollIndicator={false}>
                 <Categories />
+            {/*    featured rows */}
+                <FeaturedRow id="1" title="Featured" description="Paid placements from our partners" featuredCategory="featured" />
+                <FeaturedRow id="2" title="Tasty Discounts" description="Everyone's been enjoying these juicy discounts!" featuredCategory="discounts" />
+                <FeaturedRow id="3" title="Offers near you!" description="Why not support your local restaurant tonight!" featuredCategory="offers" />
             </ScrollView>
         </SafeAreaView>
     );
