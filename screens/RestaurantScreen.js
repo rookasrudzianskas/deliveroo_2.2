@@ -1,4 +1,4 @@
-import React, {useLayoutEffect} from 'react';
+import React, {useEffect, useLayoutEffect} from 'react';
 import {Text, View, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native';
 import {useNavigation, useRoute} from "@react-navigation/native";
 import {urlFor} from "../sanity";
@@ -8,6 +8,8 @@ import { AntDesign } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import DishRow from "../components/DishRow";
 import BasketIcon from "../components/BasketIcon";
+import {useDispatch} from "react-redux";
+import {setRestaurant} from "../features/restaurantSlice";
 
 // <Ionicons name="ios-star" size={24} color="black" />
 // <SimpleLineIcons name="location-pin" size={24} color="black" />
@@ -26,12 +28,28 @@ const RestaurantScreen = () => {
         lat
     }} = useRoute();
     const navigation = useNavigation();
+    const dispatch = useDispatch();
 
     useLayoutEffect(() => {
         navigation.setOptions({
             headerShown: false,
         })
     }, [])
+
+    useEffect(() => {
+        dispatch(setRestaurant({
+            id,
+            imgUrl,
+            title,
+            rating,
+            genre,
+            address,
+            short_description,
+            dishes,
+            long,
+            lat
+        }));
+    }, [dispatch])
     return (
         <>
             <BasketIcon />
