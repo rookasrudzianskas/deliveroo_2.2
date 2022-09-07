@@ -1,12 +1,12 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
+import {useNavigation} from "@react-navigation/native";
 
 const BasketScreen = () => {
+    const navigation = useNavigation();
     return (
         <View>
-            <Text>
-                byrookas 🚀
-            </Text>
+
         </View>
     );
 };
