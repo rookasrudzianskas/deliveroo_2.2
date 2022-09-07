@@ -55,6 +55,7 @@ const RestaurantScreen = () => {
                             </Text>
                         </View>
                     </View>
+                    <Text className="text-gray-500 mt-2 pb-4">{short_description}</Text>
                 </View>
             </View>
         </ScrollView>
